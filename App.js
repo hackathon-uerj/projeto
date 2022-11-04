@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View, Button, Alert, TouchableOpacity, Image } from "react-native";
+import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -10,6 +10,7 @@ const play = './assets/Play.png'
 
 const MyStack = () => {
   return (
+    <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
@@ -17,14 +18,13 @@ const MyStack = () => {
         />
         <Stack.Screen name="Feed" component={Feed} />
       </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
 const App = () => {
   return (
-  <NavigationContainer>
     <MyStack />
-  </NavigationContainer>
   );
 };
 
@@ -35,7 +35,7 @@ const Home = ({ navigation }) => {
       </ImageBackground>
       <TouchableOpacity
         style={styles.button}
-        onPress={navigation.navigate('Feed')}
+        onPress={() => navigation.navigate('Feed')}
       >
           <Image source={require(play)}/>
       </TouchableOpacity>
@@ -43,7 +43,7 @@ const Home = ({ navigation }) => {
   );
 };
 
-const Feed = () => {
+const Feed = ({ navigation }) => {
   return (
       <Text>Hello Navigation!</Text>
   );
