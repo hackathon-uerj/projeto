@@ -2,7 +2,7 @@
 
 ## HIPPO - Saúde de uma forma divertida
 
-HIPPO é um aplicativo educativo que utiliza de jogos para estimular uma vida mais saúdavel para as crianças e seus responsáveis. A saúde de seus filhos é um cuidado diário dos pais e HIPPO surge como uma ferramenta que promete facilitar esse trabalho. 
+HIPPO é um aplicativo educativo que utiliza de jogos para estimular uma vida mais saudável para as crianças e seus responsáveis. A saúde de seus filhos é um cuidado diário dos pais e HIPPO surge como uma ferramenta que promete facilitar esse trabalho. 
 
 <br>
 <br>
