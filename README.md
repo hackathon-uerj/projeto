@@ -54,7 +54,7 @@ HIPPO é um aplicativo educativo que utiliza de jogos para estimular uma vida ma
 Este aplicativo foi desenvolvido utilizando o framework react native e javascript.
 Para emular este app, recomenda-se utilizar o Expo, contudo, o Android Studio e Xcode também são opções validas.
 
-De toda forma, para preparar o ambiente no seu pc para usar qualquer das alternativas de emulação a cima, basta seguir o passo-a-passo do tutorial disponível no site do react native.
+De toda forma, para preparar o ambiente no seu pc para usar qualquer das alternativas de emulação a cima, basta seguir o passo-a-passo do tutorial disponível no site do [react native](https://reactnative.dev/docs/environment-setup).
 
 Para rodar o app:
 
