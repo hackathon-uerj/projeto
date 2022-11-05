@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
+import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Image, Alert } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -52,11 +52,16 @@ const Feed = ({ navigation }) => {
       </ImageBackground>
       <TouchableOpacity
         style={styles.snack}
+        onPress={snackMessage}
       >
           <Image source={require(snack)}/>
       </TouchableOpacity>
     </View>
   );
+}
+
+function snackMessage() {
+  Alert.alert('Testando!')
 }
 
 const styles = StyleSheet.create({
