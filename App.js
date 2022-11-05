@@ -8,6 +8,7 @@ const Stack = createNativeStackNavigator();
 const background = './assets/Marketing.jpg';
 const play = './assets/Play.png'
 const feed = './assets/Feed.jpg'
+const snack = './assets/Snack.png'
 
 const MyStack = () => {
   return (
@@ -35,7 +36,7 @@ const Home = ({ navigation }) => {
       <ImageBackground source={require(background)} resizeMode="cover" style={styles.image}>
       </ImageBackground>
       <TouchableOpacity
-        style={styles.button}
+        style={styles.play}
         onPress={() => navigation.navigate('Feed')}
       >
           <Image source={require(play)}/>
@@ -49,6 +50,11 @@ const Feed = ({ navigation }) => {
     <View style={styles.container}>
       <ImageBackground source={require(feed)} resizeMode="cover" style={styles.image}>
       </ImageBackground>
+      <TouchableOpacity
+        style={styles.snack}
+      >
+          <Image source={require(snack)}/>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -69,10 +75,15 @@ const styles = StyleSheet.create({
     textAlign: "center",
     backgroundColor: "#000000c0"
   },
-  button: {
+  play: {
     position: "absolute",
     top: 410,
-    left: 50,
+    left: 50
+  },
+  snack: {
+    position: "absolute",
+    top: 545,
+    left: 275
   }
 });
 
