@@ -6,10 +6,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const home = './assets/home-bg.jpg';
 const kids = './assets/kids-bg.jpg';
-const feedGame = './assets/feed-game-bg.jpg'
+const feedGame = './assets/feed-game-bg.jpg';
+const dashboard = './assets/dashboard-bg.jpg';
 
-const buttonPlay = './assets/button-play.png'
-const snack = './assets/button-snack.png'
+const buttonPlay = './assets/button-play.png';
+const snack = './assets/button-snack.png';
 const buttonKids = './assets/button-kids.png';
 const buttonParents = './assets/button-parents.png';
 
@@ -25,6 +26,7 @@ const MyStack = () => {
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="KidsArea" component={KidsArea} />
+        <Stack.Screen name="ParentsArea" component={ParentsArea} />
         <Stack.Screen name="Feed" component={Feed} />
       </Stack.Navigator>
     </NavigationContainer>
@@ -73,6 +75,15 @@ const KidsArea = ({ navigation }) => {
   );
 };
 
+const ParentsArea = () => {
+  return (
+    <View style={styles.container}>
+      <ImageBackground source={require(dashboard)} resizeMode="cover" style={styles.image}>
+      </ImageBackground>
+    </View>
+  );
+};
+
 const Feed = () => {
   return (
     <View style={styles.container}>
@@ -89,7 +100,7 @@ const Feed = () => {
 }
 
 function snackMessage() {
-  Alert.alert('Testando!')
+  Alert.alert('-10 sede | -20 energia | +30 comida')
 }
 
 const styles = StyleSheet.create({
