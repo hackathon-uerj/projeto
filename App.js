@@ -7,15 +7,16 @@ const Stack = createNativeStackNavigator();
 
 const background = './assets/Marketing.jpg';
 const play = './assets/Play.png'
+const feed = './assets/Feed.jpg'
 
 const MyStack = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-        />
+      <Stack.Navigator screenOptions={{
+        headerShown: false,
+      }}
+      >
+        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Feed" component={Feed} />
       </Stack.Navigator>
     </NavigationContainer>
@@ -45,7 +46,10 @@ const Home = ({ navigation }) => {
 
 const Feed = ({ navigation }) => {
   return (
-      <Text>Hello Navigation!</Text>
+    <View style={styles.container}>
+      <ImageBackground source={require(feed)} resizeMode="cover" style={styles.image}>
+      </ImageBackground>
+    </View>
   );
 }
 
